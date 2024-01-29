@@ -1,0 +1,17 @@
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 400px;
+    padding: 25px
+}
+
+.mainpage{
+    margin-top: 200px;
+}
