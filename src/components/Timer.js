@@ -4,7 +4,7 @@ import "../css/index.css";
 // import alaram from "/images/alaram.wav";
 
 const Timer = () => {
-  const [showTime, setShowTime] = useState(10);
+  const [showTime, setShowTime] = useState(20);
   const [btnActive, setBtnActive] = useState(false);
   const navigate = useNavigate();
   const { state } = useLocation();
@@ -13,7 +13,7 @@ const Timer = () => {
     if (state && state.timer) {
       setShowTime(state.timer);
     } else {
-      setShowTime(10);
+      setShowTime(20);
     }
   }, [state]);
   const alaramSound = new Audio("/images/alaram.wav");
