@@ -54,10 +54,14 @@ const Timer = () => {
     };
   }, [btnActive, showTime]);
 
-  const resetShowTime = () => {
-    console.log("hii");
-    // setBtnActive(false);
-    setShowTime(10);
+  const resetShowTime = (customTime) => {
+    if (customTime === 10) {
+      setShowTime(10);
+    } else {
+      setShowTime(customTime);
+    }
+
+    setBtnActive(false);
   };
   return (
     <div className="main-container">
@@ -74,7 +78,11 @@ const Timer = () => {
         <button
           className="btn btn-success mx-2"
           onClick={() => {
-            resetShowTime(showTime);
+            if (state && state.timer) {
+              resetShowTime(state.timer);
+            } else {
+              resetShowTime(10);
+            }
           }}
         >
           <b>RESET</b>
